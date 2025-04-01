@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import api from '../../utils/api'
+import Loader from '../../components/loader';
 import Error from '../../components/error';
 import { Link } from 'react-router-dom';
 import { FaPlay, FaBookmark } from "react-icons/fa";
@@ -9,7 +10,7 @@ import Button from '../../components/button';
 
 const Hero = () => {
 
-    const [movie, setMovie] = useState( );
+    const [movie, setMovie] = useState();
     const [error, setError] = useState();
 
     useEffect(() => {
@@ -22,7 +23,7 @@ const Hero = () => {
     }, []);
 
     if(error ) return <Error info={error} />;
-   // if(!movie) return <Loader />;
+    if(!movie) return <Loader />;
 
   return (
     <div className='grid md:grid-cols-2 md:max-h-[400px] gap-5 mb-10'>
