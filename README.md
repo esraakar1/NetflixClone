@@ -10,3 +10,4 @@ tailwindcss
 @splidejs/splide
 @splidejs/react-splide
 millify# Netflix-colon
+# Clone-Netflix
